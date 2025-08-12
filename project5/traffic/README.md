@@ -1,0 +1,5 @@
+# My Experimentation Process
+
+I starting with a really basic Neural Network, I mostly copied the exact neural network giving in the soruce code of week 5 in the 'digits' example. This was the worst model, giving me around `5%` accuracy. In the second try I increased the number of convolution and pooling steps. This gave me a far better result of around `50%` accuracy. After that I tried different combinations of covolutions, pooling, hiddel layers, and other steps like normalization and global average pooling. At the end the best model I could come up with gave me an accuracy of around `99.6%`.
+
+In my best model, I resized all the images to be `48x48` to keep more information about the image. I normalized each image's data by dividing them by `255` so that the model has a better scale to train on. I doubled the convolution steps and maxpooled after every two convolutions. In the end I took a global average pool for generalization. What I noticed was that the biggest changes were to increase the image size, to normalize the data to fit in the `0` to `1` scale before hand, and to normalize the model in between layers to help with stability and convergence.
